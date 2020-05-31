@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="./css/caidan.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+       /*CSS全局设置*/
+*{
+   margin:0;
+   padding:0;
+   font-size:16px;
+   font-family:"微软雅黑";
+}
+.nav{
+   height:50px;
+   margin-top:20px;
+   margin-left:10px;
+}
+.nav ul{
+   list-style:none;
+   height:50px;
+   border-bottom:10px solid #FF6600;
+   padding-left:30px;
+}
+.nav li{
+   float:left;
+   margin-top:10px;
+}
+.nav li a{
+    background-color:#EEEEEE;
+    text-decoration:none;
+    color:#000000;
+    display:block;
+    width:90px;
+    height:40px;
+    line-height:40px;
+    text-align:center;
+    margin-left:1px;
+    /*设置圆角属性,IE6,7,8不支持*/
+    border-top-left-radius:15px;
+    border-top-right-radius:15px;
+}
+.nav li a:hover,.nav li a.on{
+    background-color:#FF6600;
+    color:#FFFFFF;
+}
+a{
+    text-decoration: none;
+}
+    </style>
+
+
+ 
+</head>
+<body>
+
+    <div id="nav" class="nav">
+        <ul>
+       <li><a class="on" href="jing.html">Scenery </a></li>
+       <li><a href="meishi.html">Food</a></li>
+       <li><a href="diaocha.html">Survey</a></li>
+       <li><a href="gerenjianjie.html">Myself</a></li>
+      
+       </ul>
+   </div>
+    <div id="form-block">
+        <h1>About SanMenXla!</h1>
+        <img src="./image/aa.jpg" width="300px" height="150px">
+       <hr>
+       <a href="home.html">查看详情</a>
+    </div>
+<!--    <button οnclick="changeFormHeight('500')">测试</button>-->
+</body>
+</html>

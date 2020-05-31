@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+    <style type="text/css">
+    body{
+        background-color: pink;
+    }
+        .talk_con{
+            width:600px;
+            height:500px;
+            border:1px solid #666;
+            margin:50px auto 0;
+            background:#f9f9f9;
+        }
+        .talk_show{
+            width:580px;
+            height:420px;
+            border:1px solid #666;
+            background:#fff;
+            margin:10px auto 0;
+            overflow:auto;
+        }
+        .talk_input{
+            width:580px;
+            margin:10px auto 0;
+        }
+        .whotalk{
+            width:80px;
+            height:30px;
+            float:left;
+            outline:none;
+        }
+        .talk_word{
+            width:420px;
+            height:26px;
+            padding:0px;
+            float:left;
+            margin-left:10px;
+            outline:none;
+            text-indent:10px;
+        }        
+        .talk_sub{
+            width:56px;
+            height:30px;
+            float:left;
+            margin-left:10px;
+        }
+        .atalk{
+           margin:10px; 
+        }
+        .atalk span{
+            display:inline-block;
+            background:#0181cc;
+            border-radius:10px;
+            color:#fff;
+            padding:5px 10px;
+        }
+        .btalk{
+            margin:10px;
+            text-align:right;
+        }
+        .btalk span{
+            display:inline-block;
+            background:#ef8201;
+            border-radius:10px;
+            color:#fff;
+            padding:5px 10px;
+        }
+    </style>
+    <script type="text/javascript">      
+    // 
+        window.onload = function(){
+            var Words = document.getElementById("words");
+            var Who = document.getElementById("who");
+            var TalkWords = document.getElementById("talkwords");
+            var TalkSub = document.getElementById("talksub");
+            
+
+            TalkSub.onclick = function(){
+	            //定义空字符串
+                var str = "";
+                if(TalkWords.value == ""){
+	             
+                    alert("消息不能为空");
+                    return;
+                }
+                if(Who.value == 0){
+	               
+                    str = '<div class="atalk"><span>A说 :' + TalkWords.value +'</span></div>';
+                }
+                else{
+                    str = '<div class="btalk"><span>B说 :' + TalkWords.value +'</span></div>' ;  
+                }
+                Words.innerHTML = Words.innerHTML + str;
+            }
+            
+        }
+
+
+    </script>
+</head>
+<body>
+    <div class="talk_con">
+        <div class="talk_show" id="words">
+            <div class="atalk"><span id="asay">survey</span></div>
+           
+            <p>1.Are you?</p>
+            <br><input class="myforms-3-2" type="radio" checked ="checked" name="2" value="sex1">boy
+            <br><input class="myforms-3-3" type="radio"  name="2" value="sex2">girl
+            <p>2.Age?</p>
+            <br> <input class="myforms-3-2" type="radio" checked ="checked" name="4" value="sex1">Less than 18
+            <br><input class="myforms-3-3" type="radio"  name="4" value="sex2">18-30
+            <br><input class="myforms-3-3" type="radio"  name="4" value="sex3">More than 30
+            <p>3.Have you ever heard of Sanmenxia?</p>
+            <br><input class="myforms-3-2" type="radio" checked ="checked" name="7" value="sex1">yes
+            <br><input class="myforms-3-3" type="radio"  name="7" value="sex2">no
+           
+            <p>4.How do you think Sanmenxia?</p>
+            <br> <input class="myforms-3-2" type="radio" checked ="checked" name="9" value="sex1">Nice,I like it.
+            <br> <input class="myforms-3-3" type="radio"  name="9" value="sex2">Beautiful, I am fascinated by it
+            <br> <input class="myforms-3-3" type="radio"  name="9" value="sex3">It's an attractive city.
+            <p>5.Do you want to go there?</p>
+            <br><input class="myforms-3-2" type="radio" checked ="checked" name="12" value="sex1">Really want to go.
+            <br><input class="myforms-3-3" type="radio"  name="12" value="sex2">Super super want to go.
+           
+            <p>6.What do you think of the boy / girl there?</p>
+            <br><input class="myforms-3-2" type="radio" checked ="checked" name="14" value="sex1">They are perfect.
+            <br> <input class="myforms-3-3" type="radio"  name="14" value="sex2">Love them so much.
+            <br> <input class="myforms-3-3" type="radio"  name="14" value="sex3">What an excellent boy / girl!
+            <br>  <p>OK,this survey is over,thank you very much,love you!</p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+        </div>
+        <div class="talk_input">
+            <select class="whotalk" id="who">
+                <option value="0"></option>
+                <option value="1"></option>
+            </select>
+            <input type="text" class="talk_word" id="talkwords">
+            <input type="button" value="发送" class="talk_sub" id="talksub">
+        </div>
+    </div>
+    <a href="caidan.html"><button style="display:block;margin-left: 90%;" >
+        返回
+       </button></a>
+</body>
+</html>
